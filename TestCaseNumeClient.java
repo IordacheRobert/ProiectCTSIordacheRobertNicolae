@@ -79,7 +79,7 @@ public class TestCaseNumeClient {
 
 		try{
 			client.setNume(nume);
-			fail("Verificare nume cu lungime mai mare de 50 de caractere");
+			fail("Verificare nume cu lungime mai mare de 50 de caractere.");
 		}catch(InvalidParameterException e){
 			
 		}
