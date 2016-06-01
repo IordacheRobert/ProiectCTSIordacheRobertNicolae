@@ -29,7 +29,7 @@ public class TestCaseComandaCalculeavaValoareTotala {
 	}
 	
 	@Test
-	public void testCaseValoareTotala10Produse() throws ExceptieCapacitateMaxima{
+	public void testValoareTotala10Produse() throws ExceptieCapacitateMaxima{
 		long valoareAsteptata=550;
 		for(int i=0;i<10;i++){
 			Produs produs=new Booster();
@@ -50,7 +50,7 @@ public class TestCaseComandaCalculeavaValoareTotala {
 	
 	
 	@Test
-	public void testCaseValoareTotalaUnProdus() throws ExceptieCapacitateMaxima{
+	public void testValoareTotalaUnProdus() throws ExceptieCapacitateMaxima{
 		
 		Produs p= new Booster();
 		comanda.adaugareProdus(p);
@@ -61,7 +61,7 @@ public class TestCaseComandaCalculeavaValoareTotala {
 	
 	
 	@Test
-	public void testCaseValoareTotalaCapacitateMaxima() throws ExceptieCapacitateMaxima{
+	public void testValoareTotalaCapacitateMaxima() throws ExceptieCapacitateMaxima{
 		for(int i=0;i<comanda.getCapacitateMaxima();i++){
 			comanda.adaugareProdus(new Booster());
 		}

@@ -30,7 +30,7 @@ public class TestCaseComandaAdaugaProdus {
 	}
 
 	@Test
-	public void testCaseAdaugaProdusCosCapacitateMaxima() throws ExceptieCapacitateMaxima {
+	public void testAdaugaProdusCosCapacitateMaxima() throws ExceptieCapacitateMaxima {
 		try {
 			for (int i = 0; i < comanda.getCapacitateMaxima() + 5; i++) {
 				comanda.adaugareProdus(new Booster());
@@ -42,7 +42,7 @@ public class TestCaseComandaAdaugaProdus {
 	}
 
 	@Test
-	public void testCaseAdaugareProdusNull() throws ExceptieCapacitateMaxima {
+	public void testAdaugareProdusNull() throws ExceptieCapacitateMaxima {
 		try {
 			comanda.adaugareProdus(null);
 			fail("Nu se poate adauga un produs null");
@@ -52,13 +52,27 @@ public class TestCaseComandaAdaugaProdus {
 	}
 
 	@Test
-	public void testCaseAdaugareProdusCuPretNegativSauZero() throws ExceptieCapacitateMaxima {
+	public void testAdaugareProdusCuPretNegativ() throws ExceptieCapacitateMaxima {
 		Produs produs = new CrispySandwich();
 		produs.pret = -50;
 
 		try {
 			comanda.adaugareProdus(produs);
 			fail("Eroare adaugare produs cu pret negativ");
+		} catch (InvalidParameterException e) {
+
+		}
+
+	}
+	
+	@Test
+	public void testAdaugareProdusCuPretZero() throws ExceptieCapacitateMaxima {
+		Produs produs = new CrispySandwich();
+		produs.pret =0;
+
+		try {
+			comanda.adaugareProdus(produs);
+			fail("Eroare adaugare produs cu pret egal cu 0");
 		} catch (InvalidParameterException e) {
 
 		}
