@@ -18,7 +18,7 @@ public class TestCaseObtineIngrediente {
 
 	@Before
 	public void setUp() throws Exception {
-		depozit=new ProxyDepozit();
+		depozit=new ProxyDepozit("file.txt");
 	}
 
 	@After
