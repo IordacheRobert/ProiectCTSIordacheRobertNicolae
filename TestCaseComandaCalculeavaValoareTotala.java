@@ -65,7 +65,7 @@ public class TestCaseComandaCalculeavaValoareTotala {
 		for(int i=0;i<comanda.getCapacitateMaxima();i++){
 			comanda.adaugareProdus(new Booster());
 		}
-		long valoareAsteptata=comanda.getCapacitateMaxima()*55;
+		long valoareAsteptata=comanda.getCapacitateMaxima()*(new Booster().pret);
 		valoareAsteptata=(long) (valoareAsteptata*0.7);
 		assertEquals("Verificare valoare totala multe produse.",valoareAsteptata,comanda.calculeazaValoareaTotala());
 	}
