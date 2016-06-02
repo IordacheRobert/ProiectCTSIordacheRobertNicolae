@@ -12,7 +12,7 @@ import ro.ase.cts.builder.Client;
 import ro.ase.cts.exceptii.ExceptieNull;
 import ro.ase.cts.util.TipPlata;
 
-public class TestCaseNumeClient {
+public class TestCaseSetNumeClient {
 
 
 	Client client;

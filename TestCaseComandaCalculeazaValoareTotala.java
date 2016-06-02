@@ -13,7 +13,7 @@ import ro.ase.cts.SimpleFactory.Produs;
 import ro.ase.cts.exceptii.ExceptieCapacitateMaxima;
 import ro.ase.cts.strategyAndObserver.Comanda;
 
-public class TestCaseComandaCalculeavaValoareTotala {
+public class TestCaseComandaCalculeazaValoareTotala {
 
 	Comanda comanda;
 
